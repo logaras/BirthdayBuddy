@@ -25,7 +25,7 @@ services:
     volumes:
       - .:/birthdaybuddy
       - /birthdaybuddy/node_modules
-    command: yarn start:migrate
+    command: yarn start:push
     depends_on:
       - db
     restart: always
