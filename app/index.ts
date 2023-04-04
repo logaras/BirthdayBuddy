@@ -8,8 +8,9 @@ app.use(async ({ next }) => {
 })
 
 const run = async () => {
-	await app.start(Number(process.env.PORT) || 3000)
-	console.log('⚡️ Birthday Buddy is running!')
+	await app.start(Number(process.env.PORT) || 8000)
+	
+	console.log('⚡️ Birthday Buddy is running!')	
 }
 
 // Home View Events & Actions
@@ -17,5 +18,6 @@ homeViewHandler()
 
 // Cron jobs
 cronJobs()
+
 
 run()
