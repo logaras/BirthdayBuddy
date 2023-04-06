@@ -5,6 +5,11 @@ on:
     branches: [ "dev" ]
   pull_request:
     branches: [ "dev" ]
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'The flow has been triggered manually'
+        required: false
 
 env:
   REMOTE_SERVER: ec2-52-57-22-132.eu-central-1.compute.amazonaws.com
