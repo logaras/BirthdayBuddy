@@ -25,9 +25,9 @@ jobs:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
     - name: Log into Remote Server
-      run: ssh $REMOTE_USER@$REMOTE_SERVER 'cd /home/ec2-user/BirthdayBuddy && git pull'
+      run: ssh $REMOTE_USER@$REMOTE_SERVER 'cd /home/ec2-user/cicd/BirthdayBuddy && git pull'
 
     - name: Run Docker Compose
-      run: ssh username@remote-server 'cd /home/ec2-user/BirthdayBuddy && docker-compose up -d'
+      run: ssh username@remote-server 'cd /home/ec2-user/cicd/BirthdayBuddy && docker-compose up -d'
 
 
